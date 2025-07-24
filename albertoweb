@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Carballo Matlock - Sitio Personal</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados para aplicar las fuentes */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .font-display {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 50%), url('https://i.imgur.com/iIOJ2wS.jpeg');
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        .quote-backdrop {
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .object-cover-top {
+            object-position: top;
+        }
+        /* Estilos para el efecto de iluminación en el fondo de la sección de contacto */
+        #contact-section { /* ID cambiado para evitar conflicto con el enlace del nav */
+            position: relative; 
+            overflow: hidden;   
+        }
+        #contact-section::before {
+            content: "";
+            position: absolute;
+            width: 600px; 
+            height: 600px;
+            background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.2), transparent);
+            border-radius: 50%;
+            left: var(--x, -1000px); 
+            top: var(--y, -1000px);
+            transform: translate(-50%, -50%);
+            pointer-events: none; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto max-w-7xl shadow-2xl bg-white">
+
+        <!-- Encabezado -->
+        <header class="bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-20">
+            <div class="flex items-center justify-between">
+                <!-- Izquierda: Navegación -->
+                <div class="w-1/3">
+                    <nav class="hidden md:flex items-center space-x-5 text-xs font-medium text-gray-600 uppercase">
+                        <a href="#about" class="hover:text-black transition-colors duration-300">Sobre Mí</a>
+                        <a href="#innovacion" class="hover:text-black transition-colors duration-300">Innovación</a>
+                        <a href="#contact-section" class="hover:text-black transition-colors duration-300">Contacto</a>
+                    </nav>
+                </div>
+
+                <!-- Centro: Nombre -->
+                <div class="w-1/3 text-center">
+                    <h1 class="font-display text-lg md:text-xl font-bold tracking-wider text-gray-800">
+                        ALBERTO CARBALLO MATLOCK
+                    </h1>
+                </div>
+
+                <!-- Derecha: Iconos de Redes -->
+                <div class="w-1/3 flex justify-end">
+                    <div class="flex items-center space-x-4">
+                        <a href="https://www.instagram.com/alberto_carrballo/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-500 hover:text-black transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                        </a>
+                        <a href="https://www.facebook.com/alberto.miguel.1023" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-500 hover:text-black transition-colors duration-300"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"></path></svg></a>
+                        <a href="https://www.linkedin.com/in/alberto-carballo-367577327/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-500 hover:text-black transition-colors duration-300"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Navegación para móviles -->
+            <nav class="md:hidden text-center space-x-8 text-sm font-medium text-gray-600 pt-4 border-t mt-4">
+                <a href="#about" class="hover:text-black transition-colors duration-300">Sobre Mí</a>
+                <a href="#innovacion" class="hover:text-black transition-colors duration-300">Innovación</a>
+                <a href="#contact-section" class="hover:text-black transition-colors duration-300">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero-bg w-full h-[75vh] bg-cover bg-center bg-no-repeat flex items-center justify-center p-4">
+                <div class="text-center text-white max-w-4xl quote-backdrop">
+                    <h2 class="font-display text-2xl md:text-4xl font-bold leading-tight text-shadow">“EL PUNTO DE PARTIDA DE TODO LOGRO ES EL DESEO.”</h2>
+                    <p class="mt-4 text-base md:text-lg font-display tracking-wider text-shadow">- NAPOLEÓN HILL</p>
+                </div>
+            </div>
+        </main>
+
+        <section id="innovacion" class="py-20 px-4 md:px-10 bg-white">
+            <div class="text-left mb-12 max-w-6xl mx-auto">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-widest">Creatividad e <br> Innovación</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                <div class="text-center"><img src="https://i.imgur.com/2aggDm7.png" alt="El arte de la conexión" class="w-full h-auto rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"><h3 class="font-display text-xl font-bold mt-6 text-gray-700 uppercase">EL ARTE DE LA CONEXIÓN</h3></div>
+                <div class="text-center"><img src="https://i.imgur.com/kh7mm8e.png" alt="Más allá del obstáculo" class="w-full h-auto rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"><h3 class="font-display text-xl font-bold mt-6 text-gray-700 uppercase">MÁS ALLÁ DEL OBSTÁCULO</h3></div>
+                <div class="text-center"><img src="https://i.imgur.com/4YxRGvD.png" alt="La magia de hacerlo diferente" class="w-full h-auto rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"><h3 class="font-display text-xl font-bold mt-6 text-gray-700 uppercase">LA MAGIA DE HACERLO DIFERENTE</h3></div>
+            </div>
+        </section>
+
+        <section id="about" class="bg-gray-50 py-20">
+            <div class="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6">
+                <div class="h-full"><img src="https://i.imgur.com/X2hfSzO.jpeg" alt="Retrato de Alberto Carballo Matlock" class="rounded-lg shadow-2xl w-full h-full object-cover object-cover-top"></div>
+                <div class="text-left">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-widest mb-6">Sobre Mí</h2>
+                    <div class="space-y-4 text-gray-600 font-light text-base md:text-lg leading-relaxed">
+                        <p>🎯 En el mundo digital actual, las marcas no solo necesitan ser creativas: necesitan ser estratégicas, medibles y funcionales. Ahí es donde entro yo.</p>
+                        <p>💼 Soy un profesional en Gerencia, Marketing y Publicidad con una visión clara: combinar creatividad, data e innovación para generar resultados reales...</p>
+                        <p>🚀 Mi experiencia en agencias creativas y entornos multidisciplinarios me ha formado como un estratega integral...</p>
+                        <p>🤝 Trabajo de la mano con equipos de diseño, media buying y contenido...</p>
+                        <p>📚 Estoy en constante formación (certificado en IA, Meta Social Media, UX & UI)...</p>
+                        <p>🧩 ¿Mi objetivo? Ser un activo estratégico para empresas que no buscan solo “hacer presencia digital”...</p>
+                        <p>💬 Si tu empresa quiere escalar con estrategia y creatividad funcional, hablemos.</p>
+                    </div>
+                    <a href="#contact-section" class="mt-8 inline-block bg-gray-800 text-white font-display font-bold uppercase tracking-widest py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors duration-300">Hablemos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="py-20 px-4 md:px-10" style="background-color: #a39a8e;">
+            <div class="text-center mb-12 max-w-6xl mx-auto relative z-10">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white uppercase tracking-widest">
+                    Seguime en mis Redes
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto relative z-10">
+                <a href="https://www.instagram.com/alberto_carrballo/?hl=es" target="_blank" rel="noopener noreferrer" class="group block rounded-2xl shadow-2xl transition-transform duration-300 hover:-translate-y-2"><img src="https://i.imgur.com/GRv1Jm2.png" alt="Instagram" class="w-full h-auto rounded-2xl transition-transform duration-300 group-hover:scale-110"></a>
+                <a href="https://www.facebook.com/alberto.miguel.1023" target="_blank" rel="noopener noreferrer" class="group block rounded-2xl shadow-2xl transition-transform duration-300 hover:-translate-y-2"><img src="https://i.imgur.com/BJ1Ot8U.png" alt="Facebook" class="w-full h-auto rounded-2xl transition-transform duration-300 group-hover:scale-110"></a>
+                <a href="https://www.linkedin.com/in/alberto-carballo-367577327/" target="_blank" rel="noopener noreferrer" class="group block rounded-2xl shadow-2xl transition-transform duration-300 hover:-translate-y-2"><img src="https://i.imgur.com/tmoMntQ.png" alt="LinkedIn" class="w-full h-auto rounded-2xl transition-transform duration-300 group-hover:scale-110"></a>
+            </div>
+        </section>
+
+        <!-- Pie de Página -->
+        <footer class="bg-gray-50 py-12 px-6">
+            <div class="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Columna del Nombre -->
+                <div class="md:col-span-1">
+                    <h3 class="font-display text-xl font-bold text-gray-800 tracking-wider">ALBERTO CARBALLO MATLOCK</h3>
+                </div>
+                <!-- Columna de Ubicación -->
+                <div>
+                    <h4 class="font-display text-lg font-bold text-gray-800 uppercase tracking-widest">Ubicación</h4>
+                    <p class="text-gray-600 mt-2">Las brisas, Managua, Nicaragua</p>
+                </div>
+                <!-- Columna de Contacto -->
+                <div>
+                    <h4 class="font-display text-lg font-bold text-gray-800 uppercase tracking-widest">Contacto</h4>
+                    <div class="text-gray-600 mt-2 space-y-1">
+                        <p>carballomatlock29@gmail.com</p>
+                        <p>+505 8759 1350</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Script para el efecto de iluminación que sigue al cursor en la sección de contacto
+        const contactSection = document.querySelector('#contact-section');
+        if (contactSection) {
+            contactSection.addEventListener('mousemove', e => {
+                const rect = contactSection.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                contactSection.style.setProperty('--x', `${x}px`);
+                contactSection.style.setProperty('--y', `${y}px`);
+            });
+            contactSection.addEventListener('mouseleave', () => {
+                contactSection.style.setProperty('--x', '-1000px');
+                contactSection.style.setProperty('--y', '-1000px');
+            });
+        }
+    </script>
+
+</body>
+</html>
